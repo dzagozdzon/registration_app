@@ -4,13 +4,14 @@ class UsersController < ApplicationController
       @user = User.new
       @address = @user.build_address
       @company = @user.build_company
-      @company_address = @company.build_address
+      @company_address = @user.company.build_address
     end
 
     def create
       @user = User.create(users_params)
       if @user.save
         flash[:notice] = "Done!"
+        redirect_to user_path(@user)
       else
         flash[:danger] = @user.errors.full_messages
         render new_user_path

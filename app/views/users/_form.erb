@@ -15,7 +15,6 @@
           <div class="form-group">
             <%= f.input :birthdate, as: :date, html5: true, label_html: {class: 'form-control'} %>
           </div>
-
           <div class="form-group">
             <%= f.input :phone_number, label_html: {class: 'form-control'} %>
           </div>
@@ -24,7 +23,7 @@
               <%= render partial: 'partials/form_address', locals: {f: ad} %>
             <% end %>
             <span>
-              <h3>Company data:</h3>
+              <h3>Company:</h3>
             </span>
           </div>
           <div class="form-group">

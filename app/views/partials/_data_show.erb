@@ -1,0 +1,19 @@
+<p><strong>User</strong></p>
+<ul>
+    <li><strong>Name:</strong><%= @user.first_name %> <%= @user.last_name %></li>
+    <li><strong>Phone number:</strong><%= @user.phone_number %></li>
+    <li><strong>Email:</strong><%= @user.email %></li>
+    <li><strong>Birthdate:</strong><%= @user.birthdate %></li>
+    <li><strong>Country:</strong><%= @user.address.country %></li>
+    <li><strong>City:</strong><%= @user.address.city %></li>
+    <li><strong>Street:</strong><%= @user.address.street %></li>
+    <li><strong>Zipcode:</strong><%= @user.address.zip_code %></li> 
+</ul>
+<p><strong>Company</strong></p>
+<ul>
+    <li><strong>Name:</strong><%= @user.company.name %></li>
+    <li><strong>Country:</strong><%= @user.company.address.country %></li>
+    <li><strong>City:</strong><%= @user.company.address.city %></li>
+    <li><strong>Street:</strong><%= @user.company.address.street %></li>
+    <li><strong>Zipcode:</strong><%= @user.company.address.zip_code %></li>
+</ul>
