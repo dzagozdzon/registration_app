@@ -1,6 +1,6 @@
 before_script:
   - cp config/database.yml
-  - psql -c 'create database registration_app_test' -U postgres
+  - psql -c 'create database registration_app_test' -U postgres 
 
 env:
   - DB=postgresql
