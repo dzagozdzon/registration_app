@@ -1,0 +1,25 @@
+before_script:
+  - cp config/database.yml
+  - psql -c 'create database registration_app_test' -U postgres
+
+env:
+  - DB=postgresql
+
+services:
+  - postgresql
+
+language: ruby
+
+rvm:
+  - 2.6.3
+
+install:
+  - gem install bundler
+  - bundle install --path vendor/bundle
+
+script:
+  - RAILS_ENV=test bundle exec rails db:migrate --trace
+  - RAILS_ENV=test bundle exec rails db:test:prepare
+
+cache:
+  bundler: true
