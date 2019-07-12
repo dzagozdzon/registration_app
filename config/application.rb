@@ -17,3 +17,9 @@ module RegistrationApp
     # the framework and any gems in your application.
   end
 end
+
+module MyApp
+  class Application < Rails::Application
+    config.autoload_paths += %W(#{config.root}/lib) 
+  end
+end
