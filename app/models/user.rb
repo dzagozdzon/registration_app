@@ -10,7 +10,6 @@ class User < ApplicationRecord
     validate :phone_format, if: Proc.new{|factor| factor.phone_number.present? }
 
     private
-
   
     def birthdate_cannot_be_in_the_future
       if birthdate.present? && birthdate > Date.today
