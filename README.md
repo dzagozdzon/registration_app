@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/dzagozdzon/registration_app/tree/circle.svg?style=svg)](https://circleci.com/gh/dzagozdzon/registration_app/tree/circle)
+
 # README
 
 ## Setup
